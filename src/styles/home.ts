@@ -1,4 +1,6 @@
-#page-auth {
+import styled from 'styled-components';
+
+export const HomeContainer = styled.div`
   display: flex;
   align-items: stretch;
   height: 100vh;
@@ -35,7 +37,7 @@
 
   main {
     flex: 8;
-
+    background: ${(props) => props.theme.colors.background};
     padding: 0 32px;
 
     display: flex;
@@ -51,7 +53,7 @@
     align-items: stretch;
     text-align: center;
 
-    > img {
+    > svg {
       align-self: center;
     }
 
@@ -68,6 +70,7 @@
         padding: 0 16px;
         background: #fff;
         border: 1px solid #a8a8b3;
+        outline: none;
       }
 
       button {
@@ -145,4 +148,4 @@
       margin-left: 16px;
     }
   }
-}
+`;

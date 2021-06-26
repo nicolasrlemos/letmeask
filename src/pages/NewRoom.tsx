@@ -10,7 +10,11 @@ import '../styles/auth.scss';
 import { database } from '../services/firebase';
 import { useAuth } from '../hooks/useAuth';
 
-export function NewRoom() {
+type NewRoomProps = {
+  toggleTheme: () => void;
+};
+
+export function NewRoom({ toggleTheme }: NewRoomProps) {
   const [newRoom, setNewRoom] = useState('');
   const history = useHistory();
   const { user } = useAuth();
@@ -29,7 +33,7 @@ export function NewRoom() {
       authorId: user?.id,
     });
 
-    history.push(`/rooms/${firebaseRoom.key}`);
+    history.push(`/admin/rooms/${firebaseRoom.key}`);
   }
 
   return (

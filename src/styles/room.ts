@@ -1,8 +1,13 @@
-#page-room {
-  margin-bottom: 32px;
+import styled from 'styled-components';
+
+export const RoomContainer = styled.div`
+  max-height: 100%;
+  height: 100vh;
+  background: ${(props) => props.theme.colors.backgroundSecundary};
   header {
     padding: 24px;
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 1px solid ${props => props.theme.colors.backgroundSecundary};
+    background: ${(props) => props.theme.colors.background};
 
     .content {
       max-width: 1120px;
@@ -39,7 +44,7 @@
       h1 {
         font-family: 'Poppins', sans-serif;
         font-size: 24px;
-        color: #29292e;
+        color: ${props => props.theme.colors.defaultText};
       }
 
       span {
@@ -117,7 +122,7 @@
     }
 
     .question-list {
-      margin-top: 32px;
+      margin: 32px 0;
     }
   }
-}
+`;
