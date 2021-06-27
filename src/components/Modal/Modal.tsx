@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react';
 import ReactDOM from 'react-dom';
 
-import '../../styles/modal.scss';
+import { ModalContainer } from './styles';
+import { BackdropContainer } from './backdropstyle';
 
 type BackdropProps = {
   handleShowModal: () => void;
@@ -17,11 +18,16 @@ type ModalProps = {
 };
 
 function Backdrop({ handleShowModal }: BackdropProps) {
-  return <div className="backdrop" onClick={handleShowModal}></div>;
+  return (
+    <BackdropContainer
+      className="backdrop"
+      onClick={handleShowModal}
+    ></BackdropContainer>
+  );
 }
 
 function ModalOverlay({ children }: ModalOverlayProps) {
-  return <div className="modal">{children}</div>;
+  return <ModalContainer className="modal">{children}</ModalContainer>;
 }
 
 const portalElement = document.getElementsByName('overlays-root')[0];

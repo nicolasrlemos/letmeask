@@ -1,14 +1,6 @@
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 20;
-  background-color: rgba(0, 0, 0, 0.75);
-}
+import styled from 'styled-components';
 
-.modal {
+export const ModalContainer = styled.div`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -17,7 +9,7 @@
 
   width: 590px;
   height: 362px;
-  background-color: #fff;
+  background: ${(props) => props.theme.colors.background};
   border-radius: 8px;
   z-index: 30;
 
@@ -47,16 +39,15 @@
       width: 160px;
     }
   }
-}
 
-@keyframes slide-down {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -1000%);
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -1000%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
   }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-
+`;

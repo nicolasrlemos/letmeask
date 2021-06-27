@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const QuestionContainer = styled.div`
-  background: ${props => props.theme.colors.question};
+  background: ${(props) => props.theme.colors.question};
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   padding: 24px;
@@ -11,16 +11,19 @@ export const QuestionContainer = styled.div`
   }
 
   &.highlighted {
-    background: #f4f0ff;
-    border: 1px solid #835afd;
-
-    footer .user-info span {
-      color: ${props => props.theme.colors.defaultText};
-    }
+    background: #b39afe;
   }
 
   &.answered {
     background: #dbdcdd;
+
+    footer .user-info span {
+      color: #737380;
+    }
+
+    p {
+      color: #737380;
+    }
   }
 
   p {
@@ -45,7 +48,7 @@ export const QuestionContainer = styled.div`
 
       span {
         margin-left: 8px;
-        color: #737380;
+        color: #000;
         font-size: 14px;
       }
     }

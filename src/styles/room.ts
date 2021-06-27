@@ -4,6 +4,7 @@ export const RoomContainer = styled.div`
   max-height: 100%;
   height: 100vh;
   background: ${(props) => props.theme.colors.backgroundSecundary};
+  overflow-y: auto;
   header {
     padding: 24px;
     border-bottom: 1px solid ${props => props.theme.colors.backgroundSecundary};
@@ -98,7 +99,7 @@ export const RoomContainer = styled.div`
 
           span {
             margin-left: 8px;
-            color: #29292e;
+            color: ${(props) => props.theme.colors.defaultText};
             font-size: 14px;
           }
         }

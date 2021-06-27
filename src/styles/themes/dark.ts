@@ -15,7 +15,8 @@ export default {
 
     logo: '#fff',
 
-    question: '#4E5355',
+    question: '#fefefe',
+    questionDisabled: '#4E5355',
 
     background: '#2C2E30',
     backgroundSecundary: '#333637',

@@ -13,7 +13,6 @@ import { useRoom } from '../hooks/useRoom';
 import { database } from '../services/firebase';
 import { RoomContainer } from '../styles/room';
 
-import '../styles/room.scss';
 import React from 'react';
 import { ThemeContext } from 'styled-components';
 

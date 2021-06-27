@@ -18,6 +18,7 @@ declare module 'styled-components' {
       logo: string;
 
       question: string;
+      questionDisabled: string;
 
       background: string;
       backgroundSecundary: string;
